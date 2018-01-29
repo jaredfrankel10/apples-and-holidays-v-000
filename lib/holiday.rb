@@ -59,7 +59,7 @@ def all_winter_holiday_supplies(holiday_hash)
   supply = []
      holiday_hash.each{|name,value|
        if name == :winter
-         value.each{|n,v| 
+         value.each{|n,v|
            supply << v
          }
        end
@@ -80,7 +80,7 @@ def all_supplies_in_holidays(holiday_hash)
        value.each{|na,va|
          puts "  #{na.to_s.gsub("_"," ").split(/ |\_/).map(&:capitalize).join(" ")}: #{va.join(", ")}"
        }
-     }  
+     }
 end
 
 def all_holidays_with_bbq(holiday_hash)
@@ -88,7 +88,7 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   ary = []
    holiday_hash.each{|name,value|
-     value.each{|n,v| 
+     value.each{|n,v|
        if v.include?("BBQ")
          ary << n
        end
@@ -96,10 +96,3 @@ def all_holidays_with_bbq(holiday_hash)
    }
    ary.flatten
 end
-
-
-
-
-
-
-
